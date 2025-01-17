@@ -38,7 +38,7 @@ class MaxNumber(Exercise[int]):
 
     def perform(self, nums: List[int]) -> int:
         return max(nums)
-        # return sorted(nums)[-1]
+        # return sorted(nums)[-1] # OBIOUSLY THIS IS NOT OPTIMIZED! DO NOT CARE ABOUT THIS!
 
 
 class EvenNumbers(Exercise[List[int]]):
@@ -90,6 +90,13 @@ class ReversedString(Exercise[str]):
 
     def perform(self, s: str) -> str:
         return s[::-1]
+        
+class FirstMultipliers(Exercise[List[int]]):
+    def __init__(self) -> None:
+        super().__init__('first_multipliers')
+
+    def perform(self, n: int, m: int) -> List[int]:
+      return [i * m for i in range(1, n +1)]
 
 
 def main() -> None:
